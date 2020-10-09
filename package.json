@@ -1,0 +1,30 @@
+{
+  "name": "kemk",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "parcel ./src/index.html -p 3000 --open",
+    "build": "parcel build ./src/index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlexDotRogach/site-for-college.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AlexDotRogach/site-for-college/issues"
+  },
+  "homepage": "https://github.com/AlexDotRogach/site-for-college#readme",
+  "dependencies": {
+    "jquery": "^3.5.1",
+    "parsel": "^0.3.0",
+    "popper.js": "^1.16.1"
+  },
+  "devDependencies": {
+    "bundler": "^0.8.0",
+    "parcel": "^1.12.4"
+  },
+  "description": ""
+}

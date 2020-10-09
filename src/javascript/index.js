@@ -1,36 +1,52 @@
+// loading a page
+// window.onload = function() {
 
-$(document).ready(function(){
-  /*variable for checking if navicon is active*/
-  var isNavActive = false;
+//     setTimeout(function() {
+//         document.querySelector('.loader').style.display = "none";
+//         document.querySelector('body').style.overflow = "scroll";
+//     }, 1000);
+// };
 
-  /*change main menu statement by add or remove class*/
-  $("#nav-open").click(function(){
-    if (isNavActive == true) {
-      $("header").removeClass("header-responsive");
-      isNavActive = false;
+//scroll animation
+
+window.addEventListener('DOMContentLoaded', () => {
+
+    document.querySelectorAll('header a').forEach(item => {
+        item.addEventListener('click', (e) => {
+            e.preventDefault();
+            document.querySelector(`${e.target.hash}`).scrollIntoView({
+                block: 'center',
+                behavior: 'smooth'
+            });
+        });
+    });
+
+//animation button
+    const butDrop = document.querySelectorAll('.butDrop button');
+
+        butDrop.forEach(item => {
+
+            item.addEventListener('click', () => {
+                if (item.name == 'ent') {
+                    hideList('dropListProf');
+                    dropList('dropList');
+                } else {
+                    hideList('dropList')
+                    dropList('dropListProf');
+                }
+            });
+        });
+
+    function dropList(list) {
+        document.querySelector(`.${list}`).classList.toggle('drop_active');
     }
-    else{
-      $("header").addClass("header-responsive");
-      isNavActive = true;
+
+    function hideList(list) {
+
+        let drop = document.querySelector(`.${list}`);
+
+        if (drop.classList.contains('drop_active')){
+            drop.classList.remove('drop_active');
+        }
     }
-  });
-
-  /*animate hiding of main menu*/
-  $("#nav-close").click(function(){
-    $(".nav-menu").slideUp();
-  });
-
-  /*smooth scroll to section*/
-  $("a").on('click', function(event) {
-
-    if (this.hash !== "") {
-
-    event.preventDefault();
-
-      $('html, body').animate({
-        scrollTop: $(this.hash).offset().top-30
-      }, 800, function(){});
-    }
-  });
 });
-
