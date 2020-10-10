@@ -189,7 +189,7 @@ var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"./..\\img\\loading.gif":[["loading.0014f50c.gif","img/loading.gif"],"img/loading.gif"],"./..\\img\\back.jpg":[["back.9cd3ab62.jpg","img/back.jpg"],"img/back.jpg"],"./..\\img\\submisOfDoc.jpg":[["submisOfDoc.5e61201e.jpg","img/submisOfDoc.jpg"],"img/submisOfDoc.jpg"],"./..\\img\\PriceBack.jpg":[["PriceBack.8ee8e17d.jpg","img/PriceBack.jpg"],"img/PriceBack.jpg"],"./..\\font\\Joane-Ultrabold.woff2":[["Joane-Ultrabold.652183f5.woff2","font/Joane-Ultrabold.woff2"],"font/Joane-Ultrabold.woff2"],"./..\\font\\Joane-Ultrabold.woff":[["Joane-Ultrabold.1376a60d.woff","font/Joane-Ultrabold.woff"],"font/Joane-Ultrabold.woff"],"./..\\font\\Joane-Ultrabold.ttf":[["Joane-Ultrabold.0fbad5c9.ttf","font/Joane-Ultrabold.ttf"],"font/Joane-Ultrabold.ttf"],"_css_loader":"../node_modules/parcel/src/builtins/css-loader.js"}],"../node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"./..\\img\\loading.gif":[["loading.0014f50c.gif","img/loading.gif"],"img/loading.gif"],"./..\\img\\back.jpg":[["back.9cd3ab62.jpg","img/back.jpg"],"img/back.jpg"],"./..\\img\\submisOfDoc.jpg":[["submisOfDoc.5e61201e.jpg","img/submisOfDoc.jpg"],"img/submisOfDoc.jpg"],"./..\\img\\specialization.jpg":[["specialization.7e53625f.jpg","img/specialization.jpg"],"img/specialization.jpg"],"./..\\img\\PriceBack.jpg":[["PriceBack.8ee8e17d.jpg","img/PriceBack.jpg"],"img/PriceBack.jpg"],"./..\\img\\maps.jpg":[["maps.259159ef.jpg","img/maps.jpg"],"img/maps.jpg"],"./..\\font\\Joane-Ultrabold.woff2":[["Joane-Ultrabold.652183f5.woff2","font/Joane-Ultrabold.woff2"],"font/Joane-Ultrabold.woff2"],"./..\\font\\Joane-Ultrabold.woff":[["Joane-Ultrabold.1376a60d.woff","font/Joane-Ultrabold.woff"],"font/Joane-Ultrabold.woff"],"./..\\font\\Joane-Ultrabold.ttf":[["Joane-Ultrabold.0fbad5c9.ttf","font/Joane-Ultrabold.ttf"],"font/Joane-Ultrabold.ttf"],"./..\\font\\Neuville.eot":[["Neuville.7a681396.eot","font/Neuville.eot"],"font/Neuville.eot"],"./..\\font\\Neuville.woff2":[["Neuville.bbf0dccf.woff2","font/Neuville.woff2"],"font/Neuville.woff2"],"./..\\font\\Neuville.woff":[["Neuville.6bf78cf5.woff","font/Neuville.woff"],"font/Neuville.woff"],"./..\\font\\Neuville.ttf":[["Neuville.ddae28b2.ttf","font/Neuville.ttf"],"font/Neuville.ttf"],"_css_loader":"../node_modules/parcel/src/builtins/css-loader.js"}],"../node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -217,7 +217,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58676" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57176" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

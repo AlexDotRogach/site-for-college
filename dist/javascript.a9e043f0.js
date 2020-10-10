@@ -137,29 +137,32 @@ window.addEventListener('DOMContentLoaded', function () {
     });
   }); //animation button
 
-  var butDrop = document.querySelectorAll('.butDrop button');
+  var butDrop = document.querySelectorAll('.butDrop button'),
+      dropListes = document.querySelectorAll('.dropList');
   butDrop.forEach(function (item) {
     item.addEventListener('click', function () {
-      if (item.name == 'ent') {
-        hideList('dropListProf');
-        dropList('dropList');
-      } else {
-        hideList('dropList');
-        dropList('dropListProf');
-      }
+      dropListes.forEach(function (list) {
+        if (list.getAttribute('atr') == item.getAttribute('atr') && list.classList.contains('drop_active')) {
+          console.log(list);
+          hideList(dropListes);
+        } else if (list.getAttribute('atr') == item.getAttribute('atr')) {
+          hideList(dropListes);
+          dropList(list);
+        }
+      });
     });
   });
 
   function dropList(list) {
-    document.querySelector(".".concat(list)).classList.toggle('drop_active');
+    list.classList.toggle('drop_active');
   }
 
-  function hideList(list) {
-    var drop = document.querySelector(".".concat(list));
-
-    if (drop.classList.contains('drop_active')) {
-      drop.classList.remove('drop_active');
-    }
+  function hideList(arr) {
+    arr.forEach(function (item) {
+      if (item.classList.contains('drop_active')) {
+        item.classList.remove('drop_active');
+      }
+    });
   }
 });
 },{}],"../node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
@@ -190,7 +193,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58676" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57176" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

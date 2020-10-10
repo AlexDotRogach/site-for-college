@@ -22,31 +22,39 @@ window.addEventListener('DOMContentLoaded', () => {
     });
 
 //animation button
-    const butDrop = document.querySelectorAll('.butDrop button');
+    const butDrop = document.querySelectorAll('.butDrop button'),
+          dropListes = document.querySelectorAll('.dropList');
 
         butDrop.forEach(item => {
 
             item.addEventListener('click', () => {
-                if (item.name == 'ent') {
-                    hideList('dropListProf');
-                    dropList('dropList');
-                } else {
-                    hideList('dropList')
-                    dropList('dropListProf');
-                }
+                dropListes.forEach(list => {
+
+                    if (list.getAttribute('atr') == item.getAttribute('atr') && 
+                    list.classList.contains('drop_active')) {
+                        console.log(list);
+                        hideList(dropListes);
+                        
+                    } else if (list.getAttribute('atr') == item.getAttribute('atr')) {
+                        hideList(dropListes);
+                        dropList(list);
+                    }
+                });
             });
         });
 
     function dropList(list) {
-        document.querySelector(`.${list}`).classList.toggle('drop_active');
+
+        list.classList.toggle('drop_active');
     }
 
-    function hideList(list) {
+    function hideList(arr) {
 
-        let drop = document.querySelector(`.${list}`);
+        arr.forEach(item => {
 
-        if (drop.classList.contains('drop_active')){
-            drop.classList.remove('drop_active');
-        }
+            if (item.classList.contains('drop_active')) {
+                item.classList.remove('drop_active');
+            }
+        });
     }
 });
