@@ -127,15 +127,33 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 // };
 //scroll animation
 window.addEventListener('DOMContentLoaded', function () {
-  document.querySelectorAll('header a').forEach(function (item) {
-    item.addEventListener('click', function (e) {
-      e.preventDefault();
-      document.querySelector("".concat(e.target.hash)).scrollIntoView({
-        block: 'center',
-        behavior: 'smooth'
+  document.querySelectorAll('header div').forEach(function (item) {
+    if (item.classList == 'burger_wrapper') {
+      if (getStyles(item).display == 'none') {
+        slowSwitch('header a');
+      } else {
+        slowSwitch('.burger_items a');
+      }
+    }
+  });
+
+  function slowSwitch(elements) {
+    console.log(elements);
+    document.querySelectorAll(elements).forEach(function (item) {
+      item.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector("".concat(e.target.hash)).scrollIntoView({
+          block: 'center',
+          behavior: 'smooth'
+        });
       });
     });
-  }); //animation button
+  }
+
+  function getStyles(elem) {
+    return window.getComputedStyle(elem, null);
+  } //animation button
+
 
   var butDrop = document.querySelectorAll('.butDrop button'),
       dropListes = document.querySelectorAll('.dropList');
@@ -163,7 +181,22 @@ window.addEventListener('DOMContentLoaded', function () {
         item.classList.remove('drop_active');
       }
     });
-  }
+  } // burger 
+
+
+  var burgerBut = document.querySelector('.burger_wrapper'),
+      burgerMenu = document.querySelector('.burger_items'),
+      burgerMenuitems = document.querySelectorAll('.burger_items a');
+  burgerBut.addEventListener('click', function () {
+    burgerMenu.classList.toggle('burgerActive');
+    burgerBut.classList.toggle('burger_wrapper_active');
+  });
+  burgerMenuitems.forEach(function (item) {
+    item.addEventListener('click', function () {
+      burgerMenu.classList.toggle('burgerActive');
+      burgerBut.classList.toggle('burger_wrapper_active');
+    });
+  });
 });
 },{}],"../node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
@@ -193,7 +226,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57176" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "64197" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

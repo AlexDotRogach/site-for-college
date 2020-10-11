@@ -80,6 +80,13 @@ body {
   background-attachment: fixed;
 }
 
+.logo {
+  width: 110px;
+  height: 85px;
+  padding-bottom: 5px;
+  pointer-events: none;
+}
+
 /*style for a tag links*/
 a {
   text-decoration: none;
@@ -114,6 +121,97 @@ header a {
   transition: 0.5s;
   transition-property: all; 
 }
+
+/* burger */
+
+.burger_wrapper  {
+  position: absolute;
+  display: none;
+  width: 50px;
+  height: 50px;
+  right: 20px;
+  top: 20px;
+  cursor: pointer;
+  transition: 1s;
+}
+
+.burger_wrapper_active .burger {
+  transform: translateY(18px) rotate(-90deg);
+}
+
+.burger_wrapper_active .burger:before {
+  transform: rotate(15deg)
+}
+
+.burger_wrapper_active .burger:after {
+  transform: translateX(-5px) rotate(40deg);
+}
+
+
+.burger {
+  display: block;
+  content: '';
+  height: 2px;
+  width: 50px;
+  background: white;
+  margin-top: 10px;
+  transition: 1s;
+}
+
+.burger:before {
+  content: '';
+  display: block;
+  height: 2px;
+  width: 50px;
+  background: white;
+  position: relative;
+  top: 10px;
+}
+
+.burger:after{
+  content: '';
+  display: block;
+  height: 2px;
+  width: 50px;
+  background: white;
+  position: relative;
+  top: 20px;
+  transition: 1s;
+}
+
+.burger_items {
+  position: fixed;
+  width: 60%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 100;
+  display: flex;
+  transform: translateX(-5000px);
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  transition: 0.9s;
+}
+
+.burger_items a:first-child {
+  margin-top: 100px;
+}
+
+.burger_items a {
+  margin-top: 40px;
+  font-family: 'Joane';
+  color: white;
+  font-size: 24px;
+  transition: 0.2s;
+}
+
+.burger_items a:hover {
+  color: rgba(241,228,228,0.8);
+  font-size: 25px;
+  transition: 0.2s;
+  text-decoration: none;
+}
+
 /* font-size */
 .fs24 {
   font-size: 24px;
@@ -138,6 +236,10 @@ header a {
 .screenSize-container {
   width: 100%;
   min-height: 100vh; 
+}
+
+.homeCont {
+  width: 900px;
 }
 
 /*own color classes*/
@@ -267,13 +369,15 @@ header a {
   text-align: center;
 }
 
-.mb18 {
-  margin-bottom: 18px;
-}
-
 #specialization {
   background: url("/specialization.7e53625f.jpg") no-repeat fixed;
   background-size:cover;
+}
+
+.imgSpec {
+  width: 650px;
+  height: 700px;
+  margin-bottom: 20px;
 }
 
 .specText {
@@ -361,5 +465,64 @@ header a {
   font-weight: normal;
   font-style: normal;
 }
+
+/* adaptaining */
+
+@media (max-width: 1200px) {
+
+  .enrTexElem {
+    font-size: 24px;
+  }
+  
+  .enrollText {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 992px) {
+
+  .homeCont {
+    width: 800px;
+  }
+
+  header a {
+    display: none;
+  }
+
+  .burger_wrapper {
+    display: block;
+  }
+  
+  .burgerActive {
+    transform: translateX(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .loadText {
+    font-size: 26px;
+  }
+
+  .homeCont {
+    width: 500px;
+  }
+}
+
+@media (max-width: 576px) {
+  .homeCont {
+    width: 400px;
+  }
+
+  .imgSpec {
+    width: 500px;
+    height: 550px;
+    margin-bottom: 20px;
+  }
+}
+
+
+
+
+
 
 /*# sourceMappingURL=/style.78032849.css.map */

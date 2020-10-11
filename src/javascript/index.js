@@ -1,25 +1,46 @@
 // loading a page
-// window.onload = function() {
+window.onload = function() {
 
-//     setTimeout(function() {
-//         document.querySelector('.loader').style.display = "none";
-//         document.querySelector('body').style.overflow = "scroll";
-//     }, 1000);
-// };
+    setTimeout(function() {
+        document.querySelector('.loader').style.display = "none";
+        document.querySelector('body').style.overflow = "scroll";
+    }, 1000);
+};
 
 //scroll animation
 
 window.addEventListener('DOMContentLoaded', () => {
 
-    document.querySelectorAll('header a').forEach(item => {
-        item.addEventListener('click', (e) => {
-            e.preventDefault();
-            document.querySelector(`${e.target.hash}`).scrollIntoView({
-                block: 'center',
-                behavior: 'smooth'
+    document.querySelectorAll('header div').forEach(item => {
+
+        if (item.classList == 'burger_wrapper') {
+
+            if (getStyles(item).display == 'none') {
+                slowSwitch('header a');
+            } else { 
+                slowSwitch('.burger_items a'); 
+            }
+        }
+    });
+
+    function slowSwitch(elements) {
+
+        console.log(elements)
+        document.querySelectorAll(elements).forEach(item => {
+            item.addEventListener('click', (e) => {
+                e.preventDefault();
+                document.querySelector(`${e.target.hash}`).scrollIntoView({
+                    block: 'center',
+                    behavior: 'smooth'
+                });
             });
         });
-    });
+    }
+
+    function getStyles(elem) {
+        return window.getComputedStyle(elem, null);
+}
+
 
 //animation button
     const butDrop = document.querySelectorAll('.butDrop button'),
@@ -57,4 +78,21 @@ window.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
+
+// burger 
+    const burgerBut = document.querySelector('.burger_wrapper'),
+          burgerMenu = document.querySelector('.burger_items'),
+          burgerMenuitems = document.querySelectorAll('.burger_items a');
+
+        burgerBut.addEventListener('click',() => {
+            burgerMenu.classList.toggle('burgerActive');
+            burgerBut.classList.toggle('burger_wrapper_active');
+        });
+
+        burgerMenuitems.forEach(item => {
+            item.addEventListener('click', () => {
+                burgerMenu.classList.toggle('burgerActive');
+                burgerBut.classList.toggle('burger_wrapper_active');
+            });
+        });
 });
