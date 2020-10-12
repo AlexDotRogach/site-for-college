@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>KEMK</title>
-  <meta name="robots" content="teaching">
+  <meta name="viewport" content="width=device-width, initial-scale=0.86, maximum-scale=3.0, minimum-scale=0.86">
       <!-- Primary stylesheet -->
   <link rel="stylesheet" href="css/style.css" >
   <link rel="stylesheet" href="css/normalize.css" >
@@ -13,23 +13,18 @@
   <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
 </head>
 <body>
-  <div class="container-fluid p-0">
+  <div class="container-fluid p-0 m-0">
     <div class="loader">
         <div class="row">
           <div class="col-xl-6 offset-xl-3 text-center mt-2">
             <div class="loadText">КИЇВСЬКИЙ ЕЛЕКТРОМЕХАНІЧНИЙ КОЛЕДЖ</div>
           </div>
         </div>
-
-        <!-- <div class="row">
-          <div class="col-xl-6 offset-xl-3"> -->
-            <div class="loadBook vertical-align"></div>
-          <!-- </div>
-        </div> -->
+        <div class="loadBook vertical-align"></div>
     </div>
   </div>
 <!-- Header -->
-  <header class="mx-auto transBlack-container">
+  <header class="transBlack-container mx-auto">
     <img class="logo" src="./img/logo.png">
     <a href="#home" class="sizeHeader color-white">Головна</a>
     <a href="#documents" class="sizeHeader color-white">Про вступ</a>
@@ -47,12 +42,15 @@
     <a href="#price" class="sizeHeader color-white">Ціни</a>
     <a href="#contactme" class="sizeHeader color-white">Як нас знайти</a>
   </div>
+
   <!-- Home container -->
 <section id="home" class="screenSize-container">
+  <div class="wrapper_home">
     <div class="transWhite-container text-center text-dark p-3 vertical-align homeCont">
         <h1 class="font-weight-light text-uppercase"> ЯКІСНА ОСВІТА СЬОГОДНІ - ПРОФЕСІЙНИЙ УСПІХ ЗАВТРА </h1>
         <h4> КИЇВСЬКИЙ ЕЛЕКТРОМЕХАНІЧНИЙ КОЛЕДЖ </h4>
     </div>
+  </div>
 </section>
 
  <!-- Acceptance documents -->
@@ -76,7 +74,7 @@
         На денну форму навчання від вступників на основі <b>БЗСО</b> (9 кл.)
       </div>
 
-      <div class="text-light text-center fs18 col-xl-3">
+      <div class="text-light text-center fs18 col-xl-3 pb-4">
         з <b>30.06</b> до <b>13.07.2020</b>
       </div>
     </div>
@@ -101,6 +99,7 @@
         з <b>30.06</b> до <b> 18.08.2020</b>
       </div>
     </div>
+
     <!-- bachelor's -->
     <div class="row">
       <div class="text-center text-light font-weight-bold fs20 pt-4 pb-4 col-xl-8 offset-xl-2">
@@ -124,7 +123,7 @@
         на споріднену спеціальність (навчання на контракті).
       </div>
 
-      <div class="text-light text-center fs18 col-xl-3">
+      <div class="text-light text-center fs18 col-xl-3 mb-4">
         з <b>13.07</b> до <b>22.07.2020</b>
       </div>
     </div>
@@ -136,7 +135,7 @@
 <section class="submisOfdoc">
   <div class="container-fluid">
     <div class="row">
-      <div class="text-center submisOfdocText fs24 col-xl-10 offset-xl-1">
+      <div class="text-center submisOfdocText col-xl-10 offset-xl-1 col-10 offset-1">
         Вступники подають до приймальної комісії наступні документи:
       </div>
     </div>
@@ -300,13 +299,12 @@
 <section id="specialization">
     <div class = "container">
       <div class="row">
-        <div class="text-center specText fs24 col-xl-10 offset-xl-1 mb-4">
+        <div class="text-center specText fs24 col-xl-10 offset-xl-1 mb-4 col-10 offset-1">
           Наші спеціальності
         </div>
       </div>
-
-      <div class="row">
-          <img src="./img/spec.png" class="imgSpec mx-auto">
+      <div class="imgSpec">
+          <img src="./img/spec.png" alt="spec">
       </div>
   </div>  
 </section>
@@ -315,7 +313,7 @@
 <section id="price" class="priceBack"> 
   <div class="container-fluid">
     <div class="row">
-      <div class="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1 col-md-10 offset-md-1 col-sm-10">
+      <div class="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1 col-md-10 offset-md-1 col-sm-10 p-0">
         <table class="table mb-0">
           <thead  >
             <tr class="tableText">

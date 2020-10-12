@@ -1,5 +1,6 @@
 body {
   overflow: hidden;
+  position: fixed;
 }
 
 .loader {
@@ -8,7 +9,8 @@ body {
   width: 100%;
   height: 100%;
   z-index: 30;
-  /* display: none; */
+  margin: 0;
+  display: block;
 }
 
 .loadBook {
@@ -32,10 +34,6 @@ body {
   animation-duration: 2s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
-}
-
-.mt240 {
-  margin-top: 240px;
 }
 
 .mAuto {
@@ -74,12 +72,6 @@ body {
   }
  }
 
-body {
-  background: url('../img/back.jpg') center no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
-}
-
 .logo {
   width: 110px;
   height: 85px;
@@ -90,9 +82,12 @@ body {
 /*style for a tag links*/
 a {
   text-decoration: none;
-  color: white; }
-  a:hover {
-    text-decoration: none; }
+  color: white; 
+}
+
+a:hover {
+  text-decoration: none; 
+}
 
 /*style for header*/
 header {
@@ -122,61 +117,73 @@ header a {
   transition-property: all; 
 }
 
+
+body {
+  background: url('../img/back.jpg') center no-repeat;
+  background-position: center center;    
+  background-repeat: no-repeat;    
+  background-attachment: fixed;    
+  background-size: cover;   
+}
+
 /* burger */
 
 .burger_wrapper  {
   position: absolute;
   display: none;
-  width: 50px;
-  height: 50px;
-  right: 20px;
-  top: 20px;
+  width: 70px;
+  height: 70px;
+  padding: 20px;
+  right: 50px;
+  top: 5px;
   cursor: pointer;
-  transition: 1s;
+  transition: 0.6s;
 }
 
 .burger_wrapper_active .burger {
-  transform: translateY(18px) rotate(-90deg);
+  transform: rotate(45deg);
 }
 
 .burger_wrapper_active .burger:before {
-  transform: rotate(15deg)
+  top: 0;
+  transform: rotate(90deg);
 }
 
 .burger_wrapper_active .burger:after {
-  transform: translateX(-5px) rotate(40deg);
+  top: 0;
+  transform: translateY(-1000px)
 }
 
 
 .burger {
   display: block;
   content: '';
-  height: 2px;
-  width: 50px;
+  height: 3px;
+  width: 70px;
   background: white;
   margin-top: 10px;
-  transition: 1s;
+  transition: 0.6s;
 }
 
 .burger:before {
   content: '';
   display: block;
-  height: 2px;
-  width: 50px;
+  height: 3px;
+  width: 70px;
   background: white;
   position: relative;
-  top: 10px;
+  top: 11px;
+  transition: 0.6s;
 }
 
 .burger:after{
   content: '';
   display: block;
-  height: 2px;
-  width: 50px;
+  height: 3px;
+  width: 70px;
   background: white;
   position: relative;
   top: 20px;
-  transition: 1s;
 }
 
 .burger_items {
@@ -190,7 +197,7 @@ header a {
   flex-flow: column nowrap;
   justify-content: flex-start;
   align-items: center;
-  transition: 0.9s;
+  transition: 0.6s;
 }
 
 .burger_items a:first-child {
@@ -230,12 +237,13 @@ header a {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%); }
+  transform: translate(-50%, -50%); 
+}
 
 /*home container size*/
 .screenSize-container {
   width: 100%;
-  min-height: 100vh; 
+  height: 100vh; 
 }
 
 .homeCont {
@@ -248,12 +256,12 @@ header a {
 }
 
 .transWhite-container {
-  background-color: rgba(255, 255, 255, 0.8); 
+  background-color: rgba(255, 255, 255, 0.9); 
 }
 
 .submisOfdoc {
-  background: url("../img/submisOfDoc.jpg") no-repeat fixed;
-  background-size:cover;
+  background: url("../img/submisOfDoc.jpg") no-repeat;
+  background-size: cover;
 }
 
 .list-group-item_bold {
@@ -282,7 +290,7 @@ header a {
 .submisOfdocText {
   font-family: 'Joane';
   color: white;
-  font-size: 38px;
+  font-size: 30px;
   margin-top: 22px;
   background-color: rgba(0, 0, 0, 0.2);
   border-radius: 100px;
@@ -370,14 +378,20 @@ header a {
 }
 
 #specialization {
-  background: url("../img/specialization.jpg") no-repeat fixed;
+  background: url("../img/specialization.jpg") no-repeat;
   background-size:cover;
+  padding-bottom: 30px;
 }
 
 .imgSpec {
-  width: 650px;
-  height: 700px;
-  margin-bottom: 20px;
+  max-width: 750px;
+  max-height: 800px;
+  margin: 0 auto 0 auto;
+}
+
+.imgSpec img {
+  width: 100%;
+  height: 100%;
 }
 
 .specText {
@@ -390,13 +404,14 @@ header a {
 }
 
 .priceBack {
-  background: url("../img/PriceBack.jpg") no-repeat fixed;
+  background: url("../img/PriceBack.jpg") no-repeat;
+  background-size: 100%;
   background-size:cover;
 }
 
 .tableText {
   font-family: 'Neuville';
-  font-size: 21px;
+  font-size: 24px;
   color: rgb(14, 4, 42);
   text-align: center;
 }
@@ -409,7 +424,7 @@ header a {
 }
 
 #contactme {
-  background: url("../img/maps.jpg") no-repeat fixed;
+  background: url("../img/maps.jpg") no-repeat;
   background-size:cover;
   height: 800px;
 }
@@ -447,6 +462,7 @@ header a {
 /* fonts */
 @font-face {
   font-family: 'Joane';
+  font-display: swap;
   src: local('../font/Joane Ultra bold'), local('Joane-Ultra-bold'),
       url('../font/Joane-Ultrabold.woff2') format('woff2'),
       url('../font/Joane-Ultrabold.woff') format('woff'),
@@ -457,6 +473,7 @@ header a {
 
 @font-face {
   font-family: 'Neuville';
+  font-display: swap;
   src: local('../font/Neuville'),
       url('../font/Neuville.eot?#iefix') format('embedded-opentype'),
       url('../font/Neuville.woff2') format('woff2'),
@@ -496,6 +513,38 @@ header a {
   .burgerActive {
     transform: translateX(0);
   }
+  
+  .imgSpec {
+    max-width: 600px;
+    max-height: 500px;
+    margin: 0 auto 30px auto;
+  }
+
+  /* body {
+    background: url('../img/back.jpg') center no-repeat;
+    width: 100%;
+    height: 100%;
+    background-attachment: fixed;
+  }
+
+  .wrapper_home {
+    background: url('../img/back.jpg') center no-repeat;
+  } */
+
+  .tableText {
+    font-family: 'Neuville';
+    font-size: 14px;
+    color: rgb(14, 4, 42);
+    text-align: center;
+  }
+  
+  .tableText_item {
+    font-family: 'Neuville';
+    font-size: 12px;
+    color: rgb(14, 4, 42);
+    text-align: center;
+  }
+
 }
 
 @media (max-width: 768px) {
@@ -506,6 +555,22 @@ header a {
   .homeCont {
     width: 500px;
   }
+
+  .wrapper_home {
+    background-image: url('../img/backSmall.jpg');
+    width: 100vw;
+    min-height: 100vh;
+    background-repeat: no-repeat;
+  } 
+
+  body {
+    background-image: url('../img/PriceBack.jpg');
+    background-size: cover;
+  }
+
+  .submisOfdocText {
+    font-size: 26px;
+  }
 }
 
 @media (max-width: 576px) {
@@ -513,13 +578,17 @@ header a {
     width: 400px;
   }
 
-  .imgSpec {
-    width: 500px;
-    height: 550px;
-    margin-bottom: 20px;
+  .tableText {
+    font-family: 'Neuville';
+    font-size: 10px;
+    color: rgb(14, 4, 42);
+    text-align: center;
+  }
+  
+  .tableText_item {
+    font-family: 'Neuville';
+    font-size: 8px;
+    color: rgb(14, 4, 42);
+    text-align: center;
   }
 }
-
-
-
-

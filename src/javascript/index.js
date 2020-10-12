@@ -4,7 +4,8 @@ window.onload = function() {
     setTimeout(function() {
         document.querySelector('.loader').style.display = "none";
         document.querySelector('body').style.overflow = "scroll";
-    }, 1000);
+        document.querySelector('body').style.position = "static";
+    }, 500);
 };
 
 //scroll animation
@@ -24,8 +25,6 @@ window.addEventListener('DOMContentLoaded', () => {
     });
 
     function slowSwitch(elements) {
-
-        console.log(elements)
         document.querySelectorAll(elements).forEach(item => {
             item.addEventListener('click', (e) => {
                 e.preventDefault();
@@ -39,7 +38,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
     function getStyles(elem) {
         return window.getComputedStyle(elem, null);
-}
+    }
 
 
 //animation button
